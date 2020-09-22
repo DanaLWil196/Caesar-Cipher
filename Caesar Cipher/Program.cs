@@ -17,7 +17,7 @@ namespace Caesar_Cipher
                 int letterPosition = Array.IndexOf(alphabet, letter);
                 int newLetterPosition = (letterPosition + 3) % 26;
                 char letterEncoded = alphabet[newLetterPosition];
-                encryptedMessage = letterEncoded;
+                encryptedMessage[i] = letterEncoded;
             }
             string encodedString = String.Join("", encryptedMessage);
             Console.WriteLine($"Your encoded message is: {encodedString}");
